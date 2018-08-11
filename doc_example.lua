@@ -1,9 +1,13 @@
 local lr = require("luarocks")
 
-home_page, doc_dir, files = lr.doc("rockname")
+rockaname = "date"
+version = nil
+rocktree = nil
 
-print(home_page)
+doc_dir, doc_file, files = lr.doc(rockname, version, rocktree)
+
 print(doc_dir)
+print(doc_file)
 for _, f in ipairs(files) do
 	print(f)
 end
